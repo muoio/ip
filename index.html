@@ -25,10 +25,10 @@
           redirect: 'follow'
         };
 
-        let response = await fetch("http://www.geoplugin.net/json.gp", requestOptions);
+        let response = await fetch("https://api.ipify.org/?format=json", requestOptions);
         response = await response.text();
         response = JSON.parse(response);
-        let ip = response.geoplugin_request;
+        let ip = response.ip;
         return ip;
       }
 
